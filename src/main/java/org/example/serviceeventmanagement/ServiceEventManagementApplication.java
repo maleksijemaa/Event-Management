@@ -4,9 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableFeignClients
-
-@SpringBootApplication
+@EnableFeignClients(basePackages = "org.example.serviceeventmanagement.client")
+@SpringBootApplication(scanBasePackages = "org.example.serviceeventmanagement")
 public class ServiceEventManagementApplication {
 
 	public static void main(String[] args) {
